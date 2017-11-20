@@ -8,6 +8,7 @@ class User < ApplicationRecord
   format: { with: VALID_EMAIL_REGEX },
   uniqueness: { case_sensitive: false }
   has_secure_password
+  has_many :microposts, dependent: :destroy
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
   # Returns the hash digest of the given string.
   def User.digest(string)
@@ -20,7 +21,9 @@ class User < ApplicationRecord
   def User.new_token
     SecureRandom.urlsafe_base64
   end
-
+  def feed
+    Micropost.where("user_id = ?", id)
+  end
   # Remembers a user in the database for use in persistent sessions.
   def remember
     self.remember_token = User.new_token
