@@ -9,8 +9,8 @@ class UserMailer < ApplicationMailer
     @user = user
     mail to: user.email, subject: "Password reset"
   end
-  def send_email(msg)
-    msg = 'hi'
+
+  def send_email
     mail to: 'funkapunkafide@gmail.com', subject: "Questions/ Comments"
   end
 end
