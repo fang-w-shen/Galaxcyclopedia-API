@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    Ascii85 (1.0.2)
     CFPropertyList (2.3.5)
     actioncable (5.1.2)
       actionpack (= 5.1.2)
@@ -39,6 +40,7 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    afm (0.2.2)
     ansi (1.5.0)
     arel (8.0.0)
     autoprefixer-rails (7.1.6)
@@ -74,6 +76,7 @@ GEM
       i18n (~> 0.5)
     ffi (1.9.18)
     ffi (1.9.18-x86-mingw32)
+    filterrific (2.1.2)
     fission (0.5.0)
       CFPropertyList (~> 2.2)
     fog (1.40.0)
@@ -228,6 +231,7 @@ GEM
     guard-minitest (2.4.6)
       guard-compat (~> 1.2)
       minitest (>= 3.0)
+    hashery (2.1.2)
     i18n (0.9.1)
       concurrent-ruby (~> 1.0)
     inflecto (0.0.2)
@@ -272,6 +276,12 @@ GEM
     notiffany (0.1.1)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    pdf-reader (2.0.0)
+      Ascii85 (~> 1.0.0)
+      afm (~> 0.2.1)
+      hashery (~> 2.0)
+      ruby-rc4
+      ttfunk
     pg (0.20.0)
     pg (0.20.0-x86-mingw32)
     pry (0.11.3)
@@ -318,6 +328,7 @@ GEM
       nokogiri (~> 1.5)
       trollop (~> 2.1)
     ruby-progressbar (1.9.0)
+    ruby-rc4 (0.1.5)
     sass (3.5.3)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -348,6 +359,7 @@ GEM
     thread_safe (0.3.6)
     tilt (2.0.8)
     trollop (2.1.2)
+    ttfunk (1.5.1)
     turbolinks (5.0.1)
       turbolinks-source (~> 5)
     turbolinks-source (5.0.3)
@@ -380,6 +392,7 @@ DEPENDENCIES
   carrierwave (= 1.1.0)
   coffee-rails (= 4.2.2)
   faker (= 1.7.3)
+  filterrific
   fog (= 1.40.0)
   guard (= 2.14.1)
   guard-minitest (= 2.4.6)
@@ -388,6 +401,7 @@ DEPENDENCIES
   listen (= 3.0.8)
   mini_magick (= 4.7.0)
   minitest-reporters (= 1.1.14)
+  pdf-reader
   pg (= 0.20.0)
   puma (= 3.9.1)
   rails (= 5.1.2)

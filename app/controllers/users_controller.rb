@@ -4,7 +4,11 @@ class UsersController < ApplicationController
 	before_action :admin_user,     only: :destroy
 
 	def index
-		@users = User.where(activated: true).paginate(page: params[:page])
+		if params[:search]
+			@users = User.search(params[:search]).where(activated: true).paginate(page: params[:page])
+		else
+			@users = User.where(activated: true).paginate(page: params[:page])
+		end
 	end
 
 	def new
@@ -27,7 +31,7 @@ class UsersController < ApplicationController
 	end
 	def show
 		@user = User.find(params[:id])
-		@microposts = @user.microposts.paginate(page: params[:page], per_page: 3)
+		@microposts = @user.microposts.paginate(page: params[:page], per_page: 20)
 	end
 	def update
 		@user = User.find(params[:id])
@@ -61,7 +65,7 @@ class UsersController < ApplicationController
 
 	def user_params
 		params.require(:user).permit(:name, :email, :password,
-			:password_confirmation)
+			:password_confirmation, :term)
 	end
 
 	def correct_user
