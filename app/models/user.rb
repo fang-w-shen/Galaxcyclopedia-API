@@ -8,7 +8,7 @@ class User < ApplicationRecord
   format: { with: VALID_EMAIL_REGEX },
   uniqueness: { case_sensitive: false }
   has_secure_password
-  has_many :microposts, dependent: :destroy
+  has_many :posts, dependent: :destroy
   has_many :active_relationships,  class_name:  "Relationship",
   foreign_key: "follower_id",
   dependent:   :destroy
@@ -40,7 +40,7 @@ class User < ApplicationRecord
 
   def feed
     following_ids = "SELECT followed_id FROM relationships WHERE  follower_id = #{id}"
-    Micropost.where("user_id IN (#{following_ids})
+    Post.where("user_id IN (#{following_ids})
      OR user_id = #{id}")
   end
   # Follows a user.
