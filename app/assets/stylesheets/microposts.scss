@@ -33,3 +33,24 @@
     margin-top: 5px;
   }
 }
+span.content > img {
+  display: none;
+}
+
+
+span.content > img[src$=".jpg"] {
+  height:350px;
+  width:350px;
+}
+span.content > img[src$=".jpeg"] {
+  height:350px;
+  width:350px;
+}
+span.content > img[src$=".gif"] {
+  height:350px;
+  width:350px;
+}
+span.content > img[src$=".png"] {
+  height:350px;
+  width:350px;
+}

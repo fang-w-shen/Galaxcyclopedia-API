@@ -5,9 +5,9 @@ class UsersController < ApplicationController
 
 	def index
 		if params[:search]
-			@users = User.search(params[:search]).where(activated: true).paginate(page: params[:page])
+			@users = User.search(params[:search]).where(activated: true).order(:name).paginate(page: params[:page])
 		else
-			@users = User.where(activated: true).paginate(page: params[:page])
+			@users = User.where(activated: true).order(:name).paginate(page: params[:page])
 		end
 	end
 
@@ -51,16 +51,17 @@ class UsersController < ApplicationController
 	def following
 		@title = "Following"
 		@user  = User.find(params[:id])
-		@users = @user.following.paginate(page: params[:page])
+		@users = @user.following.order(:name).paginate(page: params[:page])
 		render 'show_follow'
 	end
 
 	def followers
 		@title = "Followers"
 		@user  = User.find(params[:id])
-		@users = @user.followers.paginate(page: params[:page])
+		@users = @user.followers.order(:name).paginate(page: params[:page])
 		render 'show_follow'
 	end
+
 	private
 
 	def user_params

@@ -19,9 +19,9 @@ class StaticPagesController < ApplicationController
 
 	def send_email
 		@email = params[:send_email]
-		p @email
-		UserMailer.send_email(params[:send_email]).deliver_now
-		flash[:success] = "Message Sent!"
+		UserMailer.send_email(@email).deliver_now
+		redirect_to contact_url
+		flash[:success] = "Your Message Was Sent Successfully and We'll Try To Get Back To You Soon! Thank You!"
 
 	end
 end
