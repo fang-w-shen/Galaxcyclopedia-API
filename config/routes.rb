@@ -20,5 +20,14 @@ Rails.application.routes.draw do
 	resources :password_resets,     only: [:new, :create, :edit, :update]
 	resources :posts,          only: [:create, :destroy]
 	resources :relationships,       only: [:create, :destroy]
+	scope module: :v1, constraints: ApiVersion.new('v1') do
+		resources :solar_systems, only: :index, path: "solarsystemapi"
+	end
+	scope module: :v2, constraints: ApiVersion.new('v2', true) do
+		resources :solar_systems, only: :index, path: "solarsystemapi"
+	end
 
+
+	post 'auth/login', to: 'authentication#authenticate'
+	post 'auth/signup', to: 'users#create'
 end

@@ -1,9 +1,11 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to "Rezoome", root_path, id: "logo" %>
+    <%= link_to "GalaXyclopedia", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Documentation",   about_path %></li>
+
         <% if !logged_in? %>
         <li><%= link_to "Sign Up", signup_path %></li>
         <% end %>

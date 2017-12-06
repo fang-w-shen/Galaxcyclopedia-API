@@ -18,6 +18,13 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(user_params)
 		if @user.save
+
+			auth_token = AuthenticateUser.new(@user.email, @user.password).call
+			response = { message: Message.account_created, auth_token: auth_token }
+			@user[:api_key] = auth_token
+
+			@user.save
+			# json_response(response, :created)
 			@user.send_activation_email
 			flash[:info] = "Please check your email to activate your account."
 			redirect_to root_url
@@ -66,7 +73,7 @@ class UsersController < ApplicationController
 
 	def user_params
 		params.require(:user).permit(:name, :email, :password,
-			:password_confirmation, :term)
+			:password_confirmation, :term,:api_key)
 	end
 
 	def correct_user

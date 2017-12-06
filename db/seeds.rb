@@ -5,28 +5,31 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+num = 0
 User.create!(name:  "Fang",
              email: "funkapunkafide@gmail.com",
              password:              "fang123",
              password_confirmation: "fang123",
              admin:     true,
              activated: true,
-             activated_at: Time.zone.now)
+             activated_at: Time.zone.now,
+             api_key:"#{num=num+1}")
 
-99.times do |n|
+10.times do |n|
   name  = Faker::Name.name
   email = "example-#{n+1}@railstutorial.org"
-  password = "password"
+  password = "fang123"
   User.create!(name:  name,
               email: email,
               password:              password,
               password_confirmation: password,
               activated: true,
-              activated_at: Time.zone.now)
+              activated_at: Time.zone.now,
+              api_key:"#{num=num+1}")
 end
 
 users = User.order(:created_at).take(6)
-50.times do
+6.times do
   content = Faker::Lorem.sentence(5)
   users.each { |user| user.posts.create!(content: content) }
 end
@@ -34,7 +37,7 @@ end
 # Following relationships
 users = User.all
 user  = users.first
-following = users[1..50]
-followers = users[2..40]
+following = users[0..5]
+followers = users[1..5]
 following.each { |followed| user.follow(followed) }
 followers.each { |follower| follower.follow(user) }

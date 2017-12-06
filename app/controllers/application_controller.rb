@@ -1,7 +1,10 @@
 class ApplicationController < ActionController::Base
 	protect_from_forgery with: :exception
-	include SessionsHelper
-	private
+    include Response
+    include ExceptionHandler
+    include SessionsHelper
+
+    private
 
     # Confirms a logged-in user.
     def logged_in_user
@@ -11,5 +14,4 @@ class ApplicationController < ActionController::Base
     		redirect_to login_url
     	end
     end
-
 end

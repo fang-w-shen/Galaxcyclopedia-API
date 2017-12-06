@@ -10,7 +10,23 @@ $gray-medium-light: #eaeaea;
 body {
   padding-top: 60px;
 }
-
+.homebackground {
+  background-image:URL('background.png');
+  width:100vw;
+  height:100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.navbar-inverse{
+  a{
+    color:white !important;
+  }
+}
+.dropdown-menu > li > a{
+  color:black !important;
+}
 section {
   overflow: auto;
 }
@@ -21,11 +37,21 @@ textarea {
 
 .center {
   text-align: center;
+
   h1 {
     margin-bottom: 10px;
   }
 }
+.jumbotron{
+  background: rgba(0,0,0,0) !important;
+  color: white !important;
+  .btn-primary{
+    background-color: rgba(13, 22, 29, 0.2) !important;
+    border-color: #12dcb8 !important;
 
+
+  }
+}
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {

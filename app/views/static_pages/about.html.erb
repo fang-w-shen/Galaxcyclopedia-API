@@ -1,27 +1,642 @@
-<% provide(:title, "About") %>
-<h1>About</h1>
+<% provide(:title, "Documentation") %>
+<h1>Documentation</h1>
+<div id="container" style="margin-bottom: 148px;">
+
+	<h2>
+		Routes
+	</h2>
+	<p>
+		Routes match in priority from top to bottom
+	</p>
+	<table id="route_table" class="route_table">
+		<thead>
+			<tr>
+				<th>URL Path:</th>
+				<th>HTTP Method:</th>
+				<th>Path: <input id="search" placeholder="Path Match" type="search" name="path[]"></th>
+				<th>Controller#Action</th>
+			</tr>
+			<tr class="bottom">
+				<th>        <a data-route-helper="_path" title="Returns a relative path (without the http or domain)" href="#">Path</a> /
+					<a data-route-helper="_url" title="Returns an absolute url (with the http and domain)" href="#">Url</a>
+				</th>
+				<th>      </th>
+				<th>
+				</th>
+				<th>      </th>
+			</tr>
+		</thead>
+		<tbody class="exact_matches" id="exact_matches"></tbody>
+		<tbody class="fuzzy_matches" id="fuzzy_matches"></tbody>
+		<tbody>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="root">
+					root<span class="helper">_path</span>
+				</td>
+				<td>
+					GET
+				</td>
+				<td data-route-path="/">
+					/
+				</td>
+				<td>
+					<p>static_pages#home</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="help">
+					help<span class="helper">_path</span>
+				</td>
+				<td>
+					GET
+				</td>
+				<td data-route-path="/help(.:format)">
+					/help(.:format)
+				</td>
+				<td>
+					<p>static_pages#help</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="about">
+					about<span class="helper">_path</span>
+				</td>
+				<td>
+					GET
+				</td>
+				<td data-route-path="/about(.:format)">
+					/about(.:format)
+				</td>
+				<td>
+					<p>static_pages#about</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="contact">
+					contact<span class="helper">_path</span>
+				</td>
+				<td>
+					GET
+				</td>
+				<td data-route-path="/contact(.:format)">
+					/contact(.:format)
+				</td>
+				<td>
+					<p>static_pages#contact</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="email">
+					email<span class="helper">_path</span>
+				</td>
+				<td>
+					POST
+				</td>
+				<td data-route-path="/contact(.:format)">
+					/contact(.:format)
+				</td>
+				<td>
+					<p>static_pages#send_email</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="signup">
+					signup<span class="helper">_path</span>
+				</td>
+				<td>
+					GET
+				</td>
+				<td data-route-path="/signup(.:format)">
+					/signup(.:format)
+				</td>
+				<td>
+					<p>users#new</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="login">
+					login<span class="helper">_path</span>
+				</td>
+				<td>
+					GET
+				</td>
+				<td data-route-path="/login(.:format)">
+					/login(.:format)
+				</td>
+				<td>
+					<p>sessions#new</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="">
+				</td>
+				<td>
+					POST
+				</td>
+				<td data-route-path="/login(.:format)">
+					/login(.:format)
+				</td>
+				<td>
+					<p>sessions#create</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="logout">
+					logout<span class="helper">_path</span>
+				</td>
+				<td>
+					DELETE
+				</td>
+				<td data-route-path="/logout(.:format)">
+					/logout(.:format)
+				</td>
+				<td>
+					<p>sessions#destroy</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="following_user">
+					following_user<span class="helper">_path</span>
+				</td>
+				<td>
+					GET
+				</td>
+				<td data-route-path="/users/:id/following(.:format)">
+					/users/:id/following(.:format)
+				</td>
+				<td>
+					<p>users#following</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="followers_user">
+					followers_user<span class="helper">_path</span>
+				</td>
+				<td>
+					GET
+				</td>
+				<td data-route-path="/users/:id/followers(.:format)">
+					/users/:id/followers(.:format)
+				</td>
+				<td>
+					<p>users#followers</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="users">
+					users<span class="helper">_path</span>
+				</td>
+				<td>
+					GET
+				</td>
+				<td data-route-path="/users(.:format)">
+					/users(.:format)
+				</td>
+				<td>
+					<p>users#index</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="">
+				</td>
+				<td>
+					POST
+				</td>
+				<td data-route-path="/users(.:format)">
+					/users(.:format)
+				</td>
+				<td>
+					<p>users#create</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="new_user">
+					new_user<span class="helper">_path</span>
+				</td>
+				<td>
+					GET
+				</td>
+				<td data-route-path="/users/new(.:format)">
+					/users/new(.:format)
+				</td>
+				<td>
+					<p>users#new</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="edit_user">
+					edit_user<span class="helper">_path</span>
+				</td>
+				<td>
+					GET
+				</td>
+				<td data-route-path="/users/:id/edit(.:format)">
+					/users/:id/edit(.:format)
+				</td>
+				<td>
+					<p>users#edit</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="user">
+					user<span class="helper">_path</span>
+				</td>
+				<td>
+					GET
+				</td>
+				<td data-route-path="/users/:id(.:format)">
+					/users/:id(.:format)
+				</td>
+				<td>
+					<p>users#show</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="">
+				</td>
+				<td>
+					PATCH
+				</td>
+				<td data-route-path="/users/:id(.:format)">
+					/users/:id(.:format)
+				</td>
+				<td>
+					<p>users#update</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="">
+				</td>
+				<td>
+					PUT
+				</td>
+				<td data-route-path="/users/:id(.:format)">
+					/users/:id(.:format)
+				</td>
+				<td>
+					<p>users#update</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="">
+				</td>
+				<td>
+					DELETE
+				</td>
+				<td data-route-path="/users/:id(.:format)">
+					/users/:id(.:format)
+				</td>
+				<td>
+					<p>users#destroy</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="edit_account_activation">
+					edit_account_activation<span class="helper">_path</span>
+				</td>
+				<td>
+					GET
+				</td>
+				<td data-route-path="/account_activations/:id/edit(.:format)">
+					/account_activations/:id/edit(.:format)
+				</td>
+				<td>
+					<p>account_activations#edit</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="">
+				</td>
+				<td>
+					GET
+				</td>
+				<td data-route-path="/account_activations/:id/edit(.:format)">
+					/account_activations/:id/edit(.:format)
+				</td>
+				<td>
+					<p>account_activations#edit</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="password_resets">
+					password_resets<span class="helper">_path</span>
+				</td>
+				<td>
+					POST
+				</td>
+				<td data-route-path="/password_resets(.:format)">
+					/password_resets(.:format)
+				</td>
+				<td>
+					<p>password_resets#create</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="new_password_reset">
+					new_password_reset<span class="helper">_path</span>
+				</td>
+				<td>
+					GET
+				</td>
+				<td data-route-path="/password_resets/new(.:format)">
+					/password_resets/new(.:format)
+				</td>
+				<td>
+					<p>password_resets#new</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="edit_password_reset">
+					edit_password_reset<span class="helper">_path</span>
+				</td>
+				<td>
+					GET
+				</td>
+				<td data-route-path="/password_resets/:id/edit(.:format)">
+					/password_resets/:id/edit(.:format)
+				</td>
+				<td>
+					<p>password_resets#edit</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="password_reset">
+					password_reset<span class="helper">_path</span>
+				</td>
+				<td>
+					PATCH
+				</td>
+				<td data-route-path="/password_resets/:id(.:format)">
+					/password_resets/:id(.:format)
+				</td>
+				<td>
+					<p>password_resets#update</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="">
+				</td>
+				<td>
+					PUT
+				</td>
+				<td data-route-path="/password_resets/:id(.:format)">
+					/password_resets/:id(.:format)
+				</td>
+				<td>
+					<p>password_resets#update</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="posts">
+					posts<span class="helper">_path</span>
+				</td>
+				<td>
+					POST
+				</td>
+				<td data-route-path="/posts(.:format)">
+					/posts(.:format)
+				</td>
+				<td>
+					<p>posts#create</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="post">
+					post<span class="helper">_path</span>
+				</td>
+				<td>
+					DELETE
+				</td>
+				<td data-route-path="/posts/:id(.:format)">
+					/posts/:id(.:format)
+				</td>
+				<td>
+					<p>posts#destroy</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="relationships">
+					relationships<span class="helper">_path</span>
+				</td>
+				<td>
+					POST
+				</td>
+				<td data-route-path="/relationships(.:format)">
+					/relationships(.:format)
+				</td>
+				<td>
+					<p>relationships#create</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="relationship">
+					relationship<span class="helper">_path</span>
+				</td>
+				<td>
+					DELETE
+				</td>
+				<td data-route-path="/relationships/:id(.:format)">
+					/relationships/:id(.:format)
+				</td>
+				<td>
+					<p>relationships#destroy</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="solar_systems">
+					solar_systems<span class="helper">_path</span>
+				</td>
+				<td>
+					GET
+				</td>
+				<td data-route-path="/solarsystemapi(.:format)">
+					/solarsystemapi(.:format)
+				</td>
+				<td>
+					<p>v1/solar_systems#index</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="">
+				</td>
+				<td>
+					GET
+				</td>
+				<td data-route-path="/solarsystemapi(.:format)">
+					/solarsystemapi(.:format)
+				</td>
+				<td>
+					<p>v2/solar_systems#index</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="auth_login">
+					auth_login<span class="helper">_path</span>
+				</td>
+				<td>
+					POST
+				</td>
+				<td data-route-path="/auth/login(.:format)">
+					/auth/login(.:format)
+				</td>
+				<td>
+					<p>authentication#authenticate</p>
+				</td>
+			</tr>
+			<tr class="route_row" data-helper="path">
+				<td data-route-name="auth_signup">
+					auth_signup<span class="helper">_path</span>
+				</td>
+				<td>
+					POST
+				</td>
+				<td data-route-path="/auth/signup(.:format)">
+					/auth/signup(.:format)
+				</td>
+				<td>
+					<p>users#create</p>
+				</td>
+			</tr>
+
+		</tbody>
+	</table>
+</div>
 <div>
 	<div class='col-md-4 text-center'><div><img src="https://www.facebook.com/rsrc.php/v3/yX/r/WRbUj5SsUf6.png" alt="Founded"><div>Founded November 2017</div></div></div>
 	<div class='col-md-4 text-center'><div><img src="https://www.facebook.com/rsrc.php/v3/yP/r/5u9lQXdstx5.png" alt="Mission"><div>Mission</div><div class="_3-8w">"Give professionals the power to share and manage the world's opportunities."</div></div></div>
 	<div class='col-md-4 text-center'><div><img src="https://www.facebook.com/rsrc.php/v3/yX/r/WRbUj5SsUf6.png" alt="Founded"><div>Founded November 2017</div></div></div>
 </div>
-	<h1 class="col-md-12">License</h1>
-	<div>Permission is hereby granted, free of charge, to any person obtaining a copy
-		of this software and associated documentation files (the "Software"), to deal
-		in the Software without restriction, including without limitation the rights
-		to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-		copies of the Software, and to permit persons to whom the Software is
-		furnished to do so, subject to the following conditions:
+<h1 class="col-md-12">License</h1>
+<div>Permission is hereby granted, free of charge, to any person obtaining a copy
+	of this software and associated documentation files (the "Software"), to deal
+	in the Software without restriction, including without limitation the rights
+	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+	copies of the Software, and to permit persons to whom the Software is
+	furnished to do so, subject to the following conditions:
 
-		The above copyright notice and this permission notice shall be included in
-		all copies or substantial portions of the Software.
+	The above copyright notice and this permission notice shall be included in
+	all copies or substantial portions of the Software.
 
-		THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-		IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-		FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-		AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-		LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-		OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-	THE SOFTWARE. The MIT License (MIT) (C) 2017 Fang W. Shen. </div>
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE. The MIT License (MIT) (C) 2017 Fang W. Shen. </div>
 
 
+<script type="text/javascript">
+  // support forEarch iterator on NodeList
+  NodeList.prototype.forEach = Array.prototype.forEach;
+
+  // Enables path search functionality
+  function setupMatchPaths() {
+    // Check if there are any matched results in a section
+    function checkNoMatch(section, noMatchText) {
+      if (section.children.length <= 1) {
+        section.innerHTML += noMatchText;
+      }
+    }
+
+    // get JSON from url and invoke callback with result
+    function getJSON(url, success) {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', url);
+      xhr.onload = function() {
+        if (this.status == 200)
+          success(JSON.parse(this.response));
+      };
+      xhr.send();
+    }
+
+    function delayedKeyup(input, callback) {
+      var timeout;
+      input.onkeyup = function(){
+        if (timeout) clearTimeout(timeout);
+        timeout = setTimeout(callback, 300);
+      }
+    }
+
+    // remove params or fragments
+    function sanitizePath(path) {
+      return path.replace(/[#?].*/, '');
+    }
+
+    var pathElements = document.querySelectorAll('#route_table [data-route-path]'),
+        searchElem   = document.querySelector('#search'),
+        exactSection = document.querySelector('#exact_matches'),
+        fuzzySection = document.querySelector('#fuzzy_matches');
+
+    // Remove matches when no search value is present
+    searchElem.onblur = function(e) {
+      if (searchElem.value === "") {
+        exactSection.innerHTML = "";
+        fuzzySection.innerHTML = "";
+      }
+    }
+
+    // On key press perform a search for matching paths
+    delayedKeyup(searchElem, function() {
+      var path = sanitizePath(searchElem.value),
+          defaultExactMatch = '<tr><th colspan="4">Paths Matching (' + path +'):</th></tr>',
+          defaultFuzzyMatch = '<tr><th colspan="4">Paths Containing (' + path +'):</th></tr>',
+          noExactMatch      = '<tr><th colspan="4">No Exact Matches Found</th></tr>',
+          noFuzzyMatch      = '<tr><th colspan="4">No Fuzzy Matches Found</th></tr>';
+
+      if (!path)
+        return searchElem.onblur();
+
+      getJSON('/rails/info/routes?path=' + path, function(matches){
+        // Clear out results section
+        exactSection.innerHTML = defaultExactMatch;
+        fuzzySection.innerHTML = defaultFuzzyMatch;
+
+        // Display exact matches and fuzzy matches
+        pathElements.forEach(function(elem) {
+          var elemPath = elem.getAttribute('data-route-path');
+
+          if (matches['exact'].indexOf(elemPath) != -1)
+            exactSection.appendChild(elem.parentNode.cloneNode(true));
+
+          if (matches['fuzzy'].indexOf(elemPath) != -1)
+            fuzzySection.appendChild(elem.parentNode.cloneNode(true));
+        })
+
+        // Display 'No Matches' message when no matches are found
+        checkNoMatch(exactSection, noExactMatch);
+        checkNoMatch(fuzzySection, noFuzzyMatch);
+      })
+    })
+  }
+
+  // Enables functionality to toggle between `_path` and `_url` helper suffixes
+  function setupRouteToggleHelperLinks() {
+
+    // Sets content for each element
+    function setValOn(elems, val) {
+      elems.forEach(function(elem) {
+        elem.innerHTML = val;
+      });
+    }
+
+    // Sets onClick event for each element
+    function onClick(elems, func) {
+      elems.forEach(function(elem) {
+        elem.onclick = func;
+      });
+    }
+
+    var toggleLinks = document.querySelectorAll('#route_table [data-route-helper]');
+
+    onClick(toggleLinks, function(){
+      var helperTxt   = this.getAttribute("data-route-helper"),
+          helperElems = document.querySelectorAll('[data-route-name] span.helper');
+
+      setValOn(helperElems, helperTxt);
+    });
+  }
+
+  setupMatchPaths();
+  setupRouteToggleHelperLinks();
+</script>
