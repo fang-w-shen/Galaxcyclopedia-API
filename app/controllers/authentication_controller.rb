@@ -13,7 +13,4 @@ class AuthenticationController < ApplicationController
   	params.permit(:email, :password)
   end
 
-  def hello
-  	render json: 'hey'
-  end
 end
