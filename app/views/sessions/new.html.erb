@@ -1,8 +1,9 @@
 <% provide(:title, "Log In") %>
-<h1>Log In</h1>
+<h1 style="color:white;">Log In</h1>
+<div class="homebackground" style="background-image:URL(<%= asset_path('background.png') %>)"></div>
 
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-md-6 col-md-offset-3" style="color:white">
     <%= form_for(:session, url: login_path) do |f| %>
 
     <%= f.label :email %>

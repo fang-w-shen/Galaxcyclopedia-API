@@ -38,19 +38,30 @@ span.content > img {
 }
 
 
-span.content > img[src$=".jpg"] {
-  height:350px;
-  width:350px;
+span.content > img[src$=".jpg" i] {
+  max-height:350px;
+  max-width:350px;
 }
-span.content > img[src$=".jpeg"] {
-  height:350px;
-  width:350px;
+
+span.content > img[src$=".jpeg" i] {
+  max-height:350px;
+  max-width:350px;
 }
-span.content > img[src$=".gif"] {
-  height:350px;
-  width:350px;
+span.content > img[src$=".gif" i] {
+  max-height:350px;
+  max-width:350px;
 }
-span.content > img[src$=".png"] {
-  height:350px;
-  width:350px;
+span.content > img[src$=".png" i] {
+  max-height:350px;
+  max-width:350px;
+}
+span.content > img[src$=".svg" i] {
+  max-height:350px;
+  max-width:350px;
+}
+.homepageimages {
+  img {
+    max-height:350px;
+    max-width:350px;
+  }
 }

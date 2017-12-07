@@ -1,6 +1,6 @@
 <% if logged_in? %>
 <div class="row">
-	<aside class="col-md-4">
+	<aside class="col-md-3" style="background: black;opacity: .7;position: fixed;color:white;">
 		<section class="user_info">
 			<%= render 'shared/user_info' %>
 		</section>
@@ -11,8 +11,7 @@
 			<%= render 'shared/post_form' %>
 		</section>
 	</aside>
-	<div class="col-md-8">
-		<h3>Local Feeds</h3>
+	<div class="col-md-8" style="float:right">
 		<%= render 'shared/feed' %>
 	</div>
 </div>
@@ -25,7 +24,7 @@
 		This is the home for SolarSystem blogging and image sharing.
 	</h2>
 
-	<%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+	<%= link_to "Sign Up Now!", signup_path, class: "btn btn-lg btn-primary" %>
 	<%= link_to "Or Straight To the Docs!", about_path, class: "btn btn-lg btn-primary" %>
 
 </div>

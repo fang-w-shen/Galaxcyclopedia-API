@@ -1,15 +1,30 @@
 <% provide(:title, @user.name) %>
 <div class="row">
 	<aside class="col-md-4">
-		<section>
-			<h1>
-				<%= gravatar_for @user %>
-				<%= @user.name %>
-			</h1>
+		<section class="user_info">
+			<%= render 'shared/user_info' %>
 		</section>
 		<section class="stats">
-			<%= render 'shared/stats' %>
+			<% @user ||= current_user %>
+			<div class="stats">
+				<a href="<%= following_user_path(@user) %>" style="color:black">
+					<strong id="following" class="stat">
+						<%= @user.following.count %>
+					</strong>
+					following
+				</a>
+				<a href="<%= followers_user_path(@user) %>" style="color:black">
+					<strong id="followers" class="stat">
+						<%= @user.followers.count %>
+					</strong>
+					followers
+				</a>
+			</div>
 		</section>
+		<section class="post_form">
+			<%= render 'shared/post_form' %>
+		</section>
+
 	</aside>
 	<div class="col-md-8">
 		<%= render 'follow_form' if logged_in? %>
@@ -17,10 +32,12 @@
 		<% if @user.posts.any? %>
 		<h3><%= @user.name %>'s Posts (<%= @user.posts.count %>)</h3>
 		<div><%= page_entries_info @posts %></div>
+		<div><%= will_paginate @posts %></div>
 		<ol class="posts">
 			<%= render @posts %>
 		</ol>
-		<%= will_paginate @posts %>
+		<div><%= will_paginate @posts %></div>
+
 		<% end %>
 	</div>
 </div>

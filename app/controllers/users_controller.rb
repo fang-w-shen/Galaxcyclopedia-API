@@ -5,9 +5,9 @@ class UsersController < ApplicationController
 
 	def index
 		if params[:search]
-			@users = User.search(params[:search]).where(activated: true).order(:name).paginate(page: params[:page])
+			@users = User.search(params[:search]).where(activated: true).order(:name).paginate(page: params[:page], per_page: 5)
 		else
-			@users = User.where(activated: true).order(:name).paginate(page: params[:page])
+			@users = User.where(activated: true).order(:name).paginate(page: params[:page], per_page: 5)
 		end
 	end
 
@@ -38,7 +38,8 @@ class UsersController < ApplicationController
 	end
 	def show
 		@user = User.find(params[:id])
-		@posts = @user.posts.paginate(page: params[:page], per_page: 20)
+		@post  = current_user.posts.build
+		@posts = @user.posts.paginate(page: params[:page], per_page: 5)
 	end
 	def update
 		@user = User.find(params[:id])

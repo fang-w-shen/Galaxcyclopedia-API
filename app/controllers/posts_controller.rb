@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 	def create
 		@post = current_user.posts.build(post_params)
 		if @post.save
-			flash[:success] = "New Proposal Created!"
+			flash[:success] = "Posted!"
 			redirect_to root_url
 		else
 			@feed_items = []
@@ -15,9 +15,10 @@ class PostsController < ApplicationController
 
 	def destroy
 		@post.destroy
-		flash[:success] = "Proposal Deleted"
+		flash[:success] = "Image Deleted"
 		redirect_to request.referrer || root_url
 	end
+
 	private
 
 	def post_params

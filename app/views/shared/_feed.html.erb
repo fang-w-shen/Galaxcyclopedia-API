@@ -1,9 +1,29 @@
 <% if @feed_items.any? %>
-  <ol class="posts">
-  	  <div>
-    <%= page_entries_info @feed_items %>
-  </div>
-    <%= render @feed_items %>
-  </ol>
-  <%= will_paginate @feed_items %>
+
+<!-- BEGIN MASONRY -->
+<div style="float:right;"><%= page_entries_info @feed_items %>
+</div>
+<div class="container col-lg-12 col-md-12" style="position:absolute;z-index:-1;margin-top:20px;">
+
+
+
+
+
+
+
+	<% @feed_items.each do |item| %>
+
+	<div class="post-box col-lg-3 col-md-3 col-sm-3">
+		<a href="/users/<%= item.user.id %>"><img class="img-responsive img-thumbnail" src="<%= item.picture %>" alt="<%= item.content %>"/></a>
+		<div class='hoverablething'><%= item.content %></div>
+	</div>
+	<% end %>
+
+	<%= will_paginate @feed_items, id: 'paginatefeeditems' %>
+
+</div>
+<!-- END MASONRY -->
+
+
+
 <% end %>
