@@ -142,6 +142,19 @@ p {
     color:white !important;
   }
 }
+a[href$="/password_resets/new" i] {
+  color: #89ff00;
+}
+
+a[href$="/signup" i]{
+  color: #89ff00;
+}
+a[href$="/about" i]{
+  color: #89ff00;
+}
+.alert-danger {
+  display:none;
+}
 footer {
   margin-top: 45px;
   padding-top: 5px;

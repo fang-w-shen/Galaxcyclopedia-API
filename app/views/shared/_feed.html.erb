@@ -3,14 +3,7 @@
 <!-- BEGIN MASONRY -->
 <div style="float:right;"><%= page_entries_info @feed_items %>
 </div>
-<div class="container col-lg-12 col-md-12" style="position:absolute;z-index:-1;margin-top:20px;">
-
-
-
-
-
-
-
+<div class="container col-lg-12 col-md-12" style="position:absolute;z-index:2;margin-top:20px;">
 	<% @feed_items.each do |item| %>
 
 	<div class="post-box col-lg-3 col-md-3 col-sm-3">
@@ -24,6 +17,15 @@
 </div>
 <!-- END MASONRY -->
 
+<% end %>
 
+<% if @feed_items.blank? %>
+<% if params[:search].nil? %>
+
+<h4>There are no posts by the author(s) <%= params[:searchauthor] %>.</h4>
+<% else %>
+
+<h4>There are no posts by the tag(s) <%= params[:search] %>.</h4>
+<% end %>
 
 <% end %>

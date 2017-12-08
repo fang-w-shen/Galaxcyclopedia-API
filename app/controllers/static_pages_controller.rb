@@ -5,9 +5,17 @@ class StaticPagesController < ApplicationController
 	end
 
 	def home
-		if logged_in?
+		if logged_in? && params[:search]
+			@post  = current_user.posts.build
+			@feed_items = Post.search(params[:search]).paginate(page: params[:page], per_page: 8)
+		elsif logged_in? && params[:searchauthor]
+			@post  = current_user.posts.build
+			@feed_items = Post.searchauthor(params[:searchauthor]).paginate(page: params[:page], per_page: 8)
+		elsif logged_in?
 			@post  = current_user.posts.build
 			@feed_items = current_user.feed.paginate(page: params[:page], per_page: 8)
+  		else
+
 		end
 	end
 

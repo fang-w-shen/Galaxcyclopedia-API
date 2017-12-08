@@ -6,7 +6,9 @@ class PostsController < ApplicationController
 		@post = current_user.posts.build(post_params)
 		if @post.save
 			flash[:success] = "Posted!"
-			redirect_to root_url
+			session[:return_to] ||= request.referer
+			redirect_to session.delete(:return_to)
+
 		else
 			@feed_items = []
 			render 'static_pages/home'

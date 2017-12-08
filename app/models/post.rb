@@ -6,6 +6,18 @@ class Post < ApplicationRecord
 	validates :content, presence: true, length: { maximum: 140 }
 	validates :picture, presence: true
 
+	def self.search(search)
+		where("content LIKE ? ", "%#{search}%")
+	end
+	def self.searchauthor(search)
+		p '************'
+		user_id = User.where("name LIKE ?", "%#{search}%").ids
+		p user_id
+		p '*******'
+
+ a = where("user_id IN (?) ", user_id)
+p a
+	end
 	# validate :picture_size
 	private
 	# def picture_size

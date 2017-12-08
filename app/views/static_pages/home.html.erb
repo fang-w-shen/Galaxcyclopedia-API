@@ -1,6 +1,6 @@
 <% if logged_in? %>
 <div class="row">
-	<aside class="col-md-3" style="background: black;opacity: .7;position: fixed;color:white;">
+	<aside class="col-md-4" style="background: black;color:white;">
 		<section class="user_info">
 			<%= render 'shared/user_info' %>
 		</section>
@@ -10,6 +10,20 @@
 		<section class="post_form">
 			<%= render 'shared/post_form' %>
 		</section>
+
+	</aside>
+	<aside class="col-md-3" style="color:white;position: absolute;color: white;top: 57vh;    width: 330px;">
+		<%= form_tag('/', :method => "get", id: "search-form") do %>
+		<input type="text" name="search" id="search" placeholder="Find By Tags:" style="color:black;">
+		<%= submit_tag "Search", :name => nil, :class => 'btn-success' %>
+		<% end %>
+
+	</aside>
+	<aside class="col-md-3" style="color:white;position: absolute;color: white;top: 70vh;    width: 330px;">
+		<%= form_tag('/', :method => "get", id: "search-formauthor") do %>
+		<input type="text" name="searchauthor" id="searchauthor" placeholder="Find By Authors:" style="color:black;">
+		<%= submit_tag "Search", :name => nil, :class => 'btn-success' %>
+		<% end %>
 	</aside>
 	<div class="col-md-8" style="float:right">
 		<%= render 'shared/feed' %>
@@ -18,18 +32,17 @@
 <% else %>
 <div class="homebackground" style="background-image:URL(<%= asset_path('background.png') %>)"></div>
 <div class="center jumbotron">
-	<h1>Welcome to GalaXyclopedia</h1>
+	<h1 style="margin-top:3em;">Welcome to Galaxcyclopedia</h1>
 
 	<h2>
-		This is the home for SolarSystem blogging and image sharing.
+		This is the Solar System API, home for planetary data querying and image hosting.
 	</h2>
 
 	<%= link_to "Sign Up Now!", signup_path, class: "btn btn-lg btn-primary" %>
 	<%= link_to "Or Straight To the Docs!", about_path, class: "btn btn-lg btn-primary" %>
 
 </div>
-<script type="text/javascript">
-	$('.navbar-inverse').css('background-color', 'rgba(12, 14, 18, 0)')
-</script>
+
 
 <% end %>
+

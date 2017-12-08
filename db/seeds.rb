@@ -15,7 +15,7 @@ User.create!(name:  "Fang",
              activated_at: Time.zone.now,
              api_key:"#{num=num+1}")
 
-10.times do |n|
+5.times do |n|
   name  = Faker::Name.name
   email = "example-#{n+1}@railstutorial.org"
   password = "fang123"
@@ -30,14 +30,14 @@ end
 
 users = User.order(:created_at).take(6)
 6.times do
-  content = Faker::Lorem.sentence(5)
+  content = assets_path('background.png')
   users.each { |user| user.posts.create!(content: content) }
 end
 
 # Following relationships
 users = User.all
 user  = users.first
-following = users[0..5]
+following = users[1]
 followers = users[1..5]
 following.each { |followed| user.follow(followed) }
 followers.each { |follower| follower.follow(user) }

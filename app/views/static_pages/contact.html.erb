@@ -1,9 +1,9 @@
 <% provide(:title, 'Contact') %>
-<h1 style="color:white">Contact</h1>
-<div class="homebackground" style="background-image:URL(<%= asset_path('background.png') %>)"></div>
+<h1 style="color:<%= logged_in? ? 'black' : 'white' %>">Contact</h1>
+<div class="homebackground" style="background-image:URL(<%= asset_path('background.png')  if !logged_in?  %>)"></div>
 
 <div class="row">
-	<div class="col-md-6 col-md-offset-3">
+	<div class="col-md-6 col-md-offset-3" style="color:<%= logged_in? ? 'black' : 'white' %>">
 		<%= form_for(:send_email) do |f| %>
 		<%= f.label :name %>
 		<%= f.text_field :name, class: 'form-control', placeholder: "Name*" %>
