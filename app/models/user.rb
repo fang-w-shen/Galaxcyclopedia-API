@@ -35,7 +35,7 @@ class User < ApplicationRecord
 
 
   def self.search(search)
-    where("name LIKE ? ", "%#{search}%")
+    where("name ILIKE ? ", "%#{search}%")
   end
 
   def feed
