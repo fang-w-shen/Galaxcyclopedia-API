@@ -29,10 +29,10 @@ User.create!(name:  "Fang",
 end
 
 users = User.order(:created_at).take(6)
-6.times do
-  content = asset_path('background.png')
-  users.each { |user| user.posts.create!(content: content) }
-end
+
+
+users[0].posts.create!(picture: File.open(File.join(Rails.root, "favicon.ico")))
+
 
 # Following relationships
 users = User.all
