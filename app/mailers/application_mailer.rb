@@ -1,5 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'solarsystemapi@noreply.com'
+  default from: 'solarsystemwiki@api.com'
   layout 'mailer'
 end
 
