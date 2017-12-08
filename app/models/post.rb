@@ -7,16 +7,16 @@ class Post < ApplicationRecord
 	validates :picture, presence: true
 
 	def self.search(search)
-		where("content LIKE ? ", "%#{search}%")
+		where("content ILIKE ? ", "%#{search}%")
 	end
 	def self.searchauthor(search)
-		p '************'
-		user_id = User.where("name LIKE ?", "%#{search}%").ids
-		p user_id
-		p '*******'
 
- a = where("user_id IN (?) ", user_id)
-p a
+		user_id = User.where("name ILIKE ?", "%#{search}%").ids
+		p user_id
+
+
+		a = where("user_id IN (?) ", user_id)
+
 	end
 	# validate :picture_size
 	private
