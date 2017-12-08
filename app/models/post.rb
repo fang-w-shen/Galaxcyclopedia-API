@@ -12,10 +12,7 @@ class Post < ApplicationRecord
 	def self.searchauthor(search)
 
 		user_id = User.where("name ILIKE ?", "%#{search}%").ids
-		p user_id
-
-
-		a = where("user_id IN (?) ", user_id)
+    	where("user_id IN (?) ", user_id)
 
 	end
 	# validate :picture_size
