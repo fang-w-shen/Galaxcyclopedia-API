@@ -30,12 +30,12 @@ end
 
 users = User.order(:created_at).take(6)
 
-users[0].create!(content: content, picture:File.open(File.join(Rails.root, "background.png"))) }
-users[1].create!(content: content, picture:File.open(File.join(Rails.root, "background.png"))) }
-users[2].create!(content: content, picture:File.open(File.join(Rails.root, "background.png"))) }
-users[3].create!(content: content, picture:File.open(File.join(Rails.root, "rails.png"))) }
-users[4].create!(content: content, picture:File.open(File.join(Rails.root, "rails.png"))) }
-users[5].create!(content: content, picture:File.open(File.join(Rails.root, "rails.png"))) }
+users[0].create!(content: content, picture:File.open(File.join(Rails.root, "background.png")))
+users[1].create!(content: content, picture:File.open(File.join(Rails.root, "background.png")))
+users[2].create!(content: content, picture:File.open(File.join(Rails.root, "background.png")))
+users[3].create!(content: content, picture:File.open(File.join(Rails.root, "rails.png")))
+users[4].create!(content: content, picture:File.open(File.join(Rails.root, "rails.png")))
+users[5].create!(content: content, picture:File.open(File.join(Rails.root, "rails.png")))
 
 
 # Following relationships
