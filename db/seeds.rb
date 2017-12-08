@@ -30,7 +30,7 @@ end
 
 users = User.order(:created_at).take(6)
 6.times do
-  content = assets_path('background.png')
+  content = asset_path('background.png')
   users.each { |user| user.posts.create!(content: content) }
 end
 
