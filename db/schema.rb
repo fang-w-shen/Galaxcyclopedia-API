@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171206183947) do
+ActiveRecord::Schema.define(version: 20171212033833) do
+
+  create_table "planets", force: :cascade do |t|
+    t.string "name"
+    t.string "distance_from_sun"
+    t.string "mass"
+    t.string "average_temperature"
+    t.string "volume"
+    t.string "diameter"
+    t.string "orbital_period"
+    t.integer "moons"
+    t.string "length_of_day"
+    t.string "gravity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "posts", force: :cascade do |t|
     t.text "content"

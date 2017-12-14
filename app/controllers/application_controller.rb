@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
     include Response
     include ExceptionHandler
     include SessionsHelper
-
+    include ::ActionController::Serialization
     private
 
     # Confirms a logged-in user.

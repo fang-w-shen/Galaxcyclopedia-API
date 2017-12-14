@@ -86,3 +86,10 @@ aside {
 .users.follow {
   padding: 0;
 }
+.users {
+  border: 1px solid black;
+  background-color: rgba(0,0,0,1) !important;
+  a {
+    color:white;
+  }
+}

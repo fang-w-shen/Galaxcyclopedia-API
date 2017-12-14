@@ -16,6 +16,6 @@ class ApiVersion
   def check_headers(headers)
     # check version from Accept headers; expect custom media type
     accept = headers[:accept]
-    accept && accept.include?("application/solarsystems.#{version}.json")
+    accept && accept.include?("version.#{version}.json")
   end
 end

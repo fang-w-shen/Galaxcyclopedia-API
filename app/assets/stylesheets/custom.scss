@@ -253,3 +253,22 @@ span.picture {
     border: 0;
   }
 }
+
+#GET {
+  &:hover {
+    background-color:#89ff00;
+    color:white;
+  }
+}
+
+
+.json-key     {
+  color:red;
+}
+.json-value   {
+  color:green;
+}
+.json-string  {
+  color:blue;
+}
+

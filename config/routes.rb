@@ -22,9 +22,18 @@ Rails.application.routes.draw do
 	resources :password_resets,     only: [:new, :create, :edit, :update]
 	scope module: :v1, constraints: ApiVersion.new('v1') do
 		resources :solar_systems, only: :index, path: "solarsystemapi"
+
 	end
 	scope module: :v2, constraints: ApiVersion.new('v2', true) do
 		resources :solar_systems, only: :index, path: "solarsystemapi"
+		resources :solar_systems, only: :index, path: "mercury"
+		resources :solar_systems, only: :index, path: "venus"
+		resources :solar_systems, only: :index, path: "earth"
+		resources :solar_systems, only: :index, path: "mars"
+		resources :solar_systems, only: :index, path: "jupiter"
+		resources :solar_systems, only: :index, path: "saturn"
+		resources :solar_systems, only: :index, path: "uranus"
+		resources :solar_systems, only: :index, path: "neptune"
 	end
 
 

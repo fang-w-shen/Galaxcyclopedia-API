@@ -25,6 +25,35 @@
 <% if !logged_in? %>
 <script type="text/javascript">
   $('.navbar-inverse').css('background-color', 'rgba(12, 14, 18, 0)')
+
+
+
+
+
 </script>
+
+
 <% end %>
+<script type="text/javascript">
+  switch(window.location.pathname) {
+    case '/':
+    $($('a[href="/"]')[1]).css({'font-size':'1.6em'});
+    break;
+    case '/users':
+    $('a[href="/users"]').css({'font-size':'1.6em'});
+    break;
+    case '/about':
+    $('a[href="/about"]').css({'font-size':'1.6em'});
+    break;
+    case '/signup':
+    $('a[href="/signup"]').css({'font-size':'1.6em'});
+    break;
+    case '/login':
+    $('a[href="/login"]').css({'font-size':'1.6em'});
+    break;
+    default:
+    $('a[href="#"]').css({'font-size':'1.6em'});
+
+  }
+</script>
 </html>
