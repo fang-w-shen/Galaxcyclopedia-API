@@ -16,13 +16,15 @@
 			<div class="mc-table-wrap col-md-12">
 				<table class="link-to-action mc-table col-md-12">
 					<tbody><tr>
-						<th style="<%= logged_in? ? 'border-bottom: 1px solid black' : 'border-bottom: 1px solid white' %>">HTTP method</th>
+						<th style="<%= logged_in? ? 'border-bottom: 1px solid black' : 'border-bottom: 1px solid white' %>">Method</th>
+
 						<th style="<%= logged_in? ? 'border-bottom: 1px solid black' : 'border-bottom: 1px solid white' %>">Endpoint</th>
+						<th style="<%= logged_in? ? 'border-bottom: 1px solid black' : 'border-bottom: 1px solid white' %>">Parameter</th>
 						<th style="<%= logged_in? ? 'border-bottom: 1px solid black' : 'border-bottom: 1px solid white' %>">Function</th>
 					</tr>
 					<tr>
 						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>" href="/solarsystemapi/?api_key=demo" class="method read">GET</a></td>
-						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>" href="/solarsystemapi/?api_key=demo">/solarsystemapi/?api_key=demo</a></td>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>" href="/solarsystemapi/?api_key=demo"><code>/solarsystemapi/?api_key=demo<code></a></td>
 						<td>Get a list of planets and information on each planet.</td>
 					</tr>
 					<tr>
@@ -69,7 +71,7 @@
 			</div>
 			<div class="dropdown col-md-6 "  style="padding:0">
 			  <button class="btn btn-default dropdown-toggle " type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-			    Language
+			    <\>
 			    <span class="caret"></span>
 			  </button>
 			  <ul class="dropdown-menu " aria-labelledby="dropdownMenu1">
@@ -91,7 +93,7 @@ Host: galaxcyclopedia.herokuapp.com
 accept: version.v2.json</pre>
 		</div>
 		<div class="col-md-6" >
-		<label for="basic-url">Try It Yourself: Use 'demo' as the apikey!</label>
+		<label for="basic-url">Try It Yourself: Use 'demo' as the api_key!</label>
 		<div class="input-group">
 		  <span class="input-group-addon" id="basic-addon3">https://galaxcyclopedia.herokuapp.com/</span>
 		  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="solarsystemapi/?api_key={yourkey}" autofocus>

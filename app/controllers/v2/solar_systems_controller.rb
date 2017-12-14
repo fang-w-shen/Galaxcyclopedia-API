@@ -33,9 +33,9 @@ module  V2
 
 		def show(planet)
 			if params[:api_key] == 'demo'
-				render json: { status: Message.successful_request, solarsystemapi: 'demo', data: Planet.all.where("name LIKE ?",planet).select(:id,:name, :moons)}
+				render json: { status: Message.successful_request, solarsystemapi: 'demo', data: Planet.all.where("name ILIKE ?",planet).select(:id,:name, :moons)}
 			elsif params[:api_key] && User.exists?(:api_key => params[:api_key])
-				render json: { status: Message.successful_request, solarsystemapi: 'version 2.0', data: Planet.all.where("name LIKE ?",planet).select(:id,:name,:distance_from_sun, :mass, :average_temperature, :volume, :diameter, :orbital_period, :moons, :length_of_day, :gravity)}
+				render json: { status: Message.successful_request, solarsystemapi: 'version 2.0', data: Planet.all.where("name ILIKE ?",planet).select(:id,:name,:distance_from_sun, :mass, :average_temperature, :volume, :diameter, :orbital_period, :moons, :length_of_day, :gravity)}
 
 			else
 				json_response({ Message: 'Invalid API KEY'})
