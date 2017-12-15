@@ -16,24 +16,3 @@
 //= require turbolinks
 //= require_tree .
 
-
-
-
-
-		$(window).on("click",()=>{
-			$('ol>li').each((index,item)=>{
-				if (item && item.classList.value == 'active') {
-					$('.scrollmenu > a.highlightedbar').removeClass('highlightedbar');
-					$('.scrollmenu > a')[index].classList.add('highlightedbar');
-				}
-
-			})
-			if (window.location.pathname != '/about') {
-				$('ol>li').each((index,item)=>{
-					if (item && item.classList.value == 'active') {
-						$('.scrollmenu > a.highlightedbar').removeClass('highlightedbar');
-					}
-				})
-			}
-
-		})
