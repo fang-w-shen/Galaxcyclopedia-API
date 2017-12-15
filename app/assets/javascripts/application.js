@@ -133,11 +133,6 @@ Host: galaxcyclopedia.herokuapp.com
 accept: version.2.0.json`
 			$('#codesection').html(text)
 		}
-		function checkinput(e) {
-
-			console.log("e", e);
-
-		}
 		var jsonPrettyPrint = {
 		   replacer: function(match, pIndent, pKey, pVal, pEnd) {
 		      var key = '<span class=json-key>';
