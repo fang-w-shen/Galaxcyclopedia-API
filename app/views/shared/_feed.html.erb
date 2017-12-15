@@ -7,7 +7,7 @@
 
 	<div class="post-box col-lg-3 col-md-3 col-sm-3" style="margin-top: -20px">
 		<a href="/users/<%= item.user.id %>"><img class="imgs" src="<%= item.picture %>" alt="<%= item.content %>"/></a>
-		<div class='hoverablething' style="height: 40%;vertical-align: middle;top: 55%;padding-left: 2px;"><%= User.find(item.user_id)[:name] %><hr><%= item.content %></div>
+		<div class='hoverablething' style="height: 40%;vertical-align: middle;top: 55%;padding-left: 2px;">Author: <%= User.find(item.user_id)[:name] %><hr>Tags: <%= item.content %></div>
 	</div>
 	<% end %>
 
