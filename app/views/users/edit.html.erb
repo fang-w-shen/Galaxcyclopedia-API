@@ -3,16 +3,35 @@
 <h1>Update your profile</h1>
 <div class="row">
 	<div class="col-md-3">
-		<%= render 'form' %>
 		<div class="gravatar_edit">
 			<%= gravatar_for @user %>
-			<a href="http://gravatar.com/emails" target="_blank">Change</a>
+			<a href="http://gravatar.com/emails" target="_blank" style="color:black;">Change</a>
 		</div>
+		<%= render 'form' %>
+
 	</div>
 	<div class="col-md-9">
 
 
-		<label>Your API-KEY</label>
-		<input disabled value=<%= @user[:api_key] %>
+		<label>Your API_KEY</label>
+		<input disabled style="background: #252528 !important;color: #33ff33 !important;" value=<%= @user[:api_key] %>
+		<br>
+		<hr>
+		<label>Sample Request</label>
+		<% text = '
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://galaxcyclopedia.herokuapp.com/solarsystem/?api_key=' +@user[:api_key] +',
+  "method": "GET",
+  "headers": {
+    "accept": "version.v2.json"
+  }
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});' %>
+		<pre style="overflow:hidden;"><%= text %></pre>
 	</div>
 </div>

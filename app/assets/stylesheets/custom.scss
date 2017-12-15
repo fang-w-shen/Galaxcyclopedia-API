@@ -29,14 +29,18 @@ body {
 }
 
 .hoverablething {
-  background: #4f4545;
-  opacity: 0;
-  position: absolute;
-  top: 70px;
-  left: 70px;
-  font-weight: bolder;
-  font-size: 12px;
-  color: white;
+    background: rgba(0,0,0,.4);
+    opacity: 0.1;
+    width: 100%;
+    height: 95%;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    margin-left: 1.1em;
+    left: 0;
+    font-weight: bolder;
+    font-size: 12px;
+    color: white;
 
 }
 
@@ -255,20 +259,82 @@ span.picture {
 }
 
 #GET {
+  color:#89ff00;
+  background-color:black;
+
   &:hover {
     background-color:#89ff00;
-    color:white;
+    color:black;
+    cursor:pointer;
   }
 }
 
 
 .json-key     {
-  color:red;
+  color:#33ff33;
 }
 .json-value   {
-  color:green;
+  color:#33ff33;
 }
 .json-string  {
-  color:blue;
+  color:#33ff33;
+}
+.hoverbtns {
+  color:#89ff00 !important;
+  background-color:rgba(13, 22, 29, 0.2) !important;
+  border-color: #12dcb8 !important;
+  &:hover {
+    background-color:#89ff00 !important;
+    color:black !important;
+  }
 }
 
+div.scrollmenu {
+    background-color: rgba(0,0,0,0);
+    overflow: auto;
+    white-space: nowrap;
+    margin-bottom:1.5em;
+
+}
+
+div.scrollmenu a {
+    display: inline-block;
+
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+
+}
+
+div.scrollmenu a:hover {
+
+    border-bottom:2px solid #17d417 !important;
+    color: #17d417 !important;
+}
+td > a{
+  text-decoration:none !important;
+  &:hover {
+    cursor:pointer;
+  }
+}
+pre {
+  background: #252528 !important;
+  color: #33ff33 !important;
+}
+
+.dropdown-menu-right > li {
+  &:hover {
+    cursor:pointer;
+  }
+}
+.btn-primary {
+  background-color:black !important;
+  &:hover {
+    background-color:#33ff33 !important;
+    color:black !important;
+  }
+}
+.highlightedbar {
+  color:#17d417 !important;
+  border-bottom:2px solid #17d417 !important;
+}

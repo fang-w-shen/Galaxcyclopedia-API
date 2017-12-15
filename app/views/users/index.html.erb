@@ -2,16 +2,17 @@
 <h1>All Users</h1>
 
 
+
+
 <%= form_tag(users_path, :method => "get", id: "search-form") do %>
-<%= text_field_tag :search, params[:search], placeholder: "Find By Name:" %>
+<%= text_field_tag :search, params[:search], placeholder: "Search By Name:" %>
 <%= submit_tag "Search", :name => nil, :class => 'btn-success' %>
 
 <% end %>
-
-<hr>
 <div><%= page_entries_info @users %></div>
-<%= will_paginate %>
 
+<%= will_paginate %>
+<hr style="margin-top:-19px;">
 <ul class="users">
 
 	<%= render @users %>

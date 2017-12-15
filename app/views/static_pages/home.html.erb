@@ -1,34 +1,22 @@
 <% if logged_in? %>
-<div class="row">
-	<aside class="col-md-4" style="background: black;color:white;">
-		<section class="user_info">
-			<%= render 'shared/user_info' %>
-		</section>
-		<section class="stats">
-			<%= render 'shared/stats' %>
-		</section>
-		<section class="post_form">
-			<%= render 'shared/post_form' %>
-		</section>
+	<div class="" style="float:right;">
+		<%= render 'shared/feed' %>
+	</div>
 
-	</aside>
-	<aside class="col-md-3" style="color:white;position: absolute;color: white;top: 57vh;    width: 330px;">
+	<aside class="col-md-3" style="color:white;position: fixed;color: white;top: 40vh;left:44.5vw;    width: 12vw;background:rgba(0,0,0,.6);padding:20px;border-radius:10px">
 		<%= form_tag('/', :method => "get", id: "search-form") do %>
-		<input type="text" name="search" id="search" placeholder="Find By Tags:" style="color:black;">
+		<input type="text" name="search" id="search" placeholder="Search By Tag:" style="color:black;">
 		<%= submit_tag "Search", :name => nil, :class => 'btn-success' %>
 		<% end %>
 
 	</aside>
-	<aside class="col-md-3" style="color:white;position: absolute;color: white;top: 70vh;    width: 330px;">
+<!-- 	<aside class="col-md-3" style="color:white;position: absolute;color: white;top: 70vh;    width: 330px;">
 		<%= form_tag('/', :method => "get", id: "search-formauthor") do %>
 		<input type="text" name="searchauthor" id="searchauthor" placeholder="Find By Authors:" style="color:black;">
 		<%= submit_tag "Search", :name => nil, :class => 'btn-success' %>
 		<% end %>
-	</aside>
-	<div class="col-md-8" style="float:right">
-		<%= render 'shared/feed' %>
-	</div>
-</div>
+	</aside> -->
+
 <% else %>
 <div class="homebackground" style="background-image:URL(<%= asset_path('background.png') %>)"></div>
 <div class="center jumbotron">
@@ -44,4 +32,3 @@
 
 
 <% end %>
-

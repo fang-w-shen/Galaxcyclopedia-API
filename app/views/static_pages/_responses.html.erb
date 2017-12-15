@@ -1,0 +1,61 @@
+			<h1 style="margin-top:-5px;text-align: left;color: #33ff33;">Responses</h1>
+			<hr>
+			<div class="mc-table-wrap col-md-12" style="padding:0;">
+				<table class="link-to-action mc-table col-md-12">
+					<tbody><tr>
+						<th style="<%= logged_in? ? 'border-bottom: 1px solid black' : 'border-bottom: 1px solid white' %>">Status</th>
+						<th style="<%= logged_in? ? 'border-bottom: 1px solid black' : 'border-bottom: 1px solid white' %>">Message</th>
+						<th style="<%= logged_in? ? 'border-bottom: 1px solid black' : 'border-bottom: 1px solid white' %>">Description</th>
+					</tr>
+					<tr>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>;width:45px;text-align:center;display:block" class="method post btn-success">200</a></td>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>" ><code style="display: inline-block; line-height: .999em; width: 140px;">OK</code></a></td>
+						<td style="padding:0"><pre style="padding:0;margin:0;padding-left:.5em;">Request was successful.</pre></td></td>
+					</tr>
+					<tr>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>;width:45px;text-align:center;display:block" class="method read btn-success">201</a></td>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>"><code style="display: inline-block; line-height: .999em; width: 140px;">Created</code></a></td>
+						<td style="padding:0"><pre style="padding:0;margin:0;padding-left:.5em;">Resource was created successfully.</pre></td></td>
+					</tr>
+					<tr>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>;width:45px;text-align:center;display:block" class="method read btn-warning">204</a></td>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>"><code style="display: inline-block; line-height: .999em; width: 140px;">No Content</code></a></td>
+						<td style="padding:0"><pre style="padding:0;margin:0;padding-left:.5em;">Request successful but no content to display.</pre></td></td>
+					</tr>
+					<tr>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>;width:45px;text-align:center;display:block" class="method read btn-danger">400</a></td>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>"><code style="display: inline-block; line-height: .999em; width: 140px;">Bad Request</code></a></td>
+						<td style="padding:0"><pre style="padding:0;margin:0;padding-left:.5em;">Request could not be understood.</pre></td></td>
+					</tr>
+					<tr>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>;width:45px;text-align:center;display:block" class="method read btn-danger">401</a></td>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>"><code style="display: inline-block; line-height: .999em; width: 140px;">Unauthorized</code></a></td>
+						<td style="padding:0"><pre style="padding:0;margin:0;padding-left:.5em;">Authentication failed / Permission Denied.</pre></td></td>
+					</tr>
+					<tr>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>;width:45px;text-align:center;display:block" class="method read btn-danger">403</a></td>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>"><code style="display: inline-block; line-height: .999em; width: 140px;">Forbidden</code></a></td>
+						<td style="padding:0"><pre style="padding:0;margin:0;padding-left:.5em;">Access Denied.</pre></td></td>
+					</tr>
+					<tr>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>;width:45px;text-align:center;display:block" class="method read btn-danger">404</a></td>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>"><code style="display: inline-block; line-height: .999em; width: 140px;">Not Found</code></a></td>
+						<td style="padding:0"><pre style="padding:0;margin:0;padding-left:.5em;">Resource was not found.</pre></td>
+					</tr>
+					<tr>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>;width:45px;text-align:center;display:block" class="method read btn-danger">422</a></td>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>"><code style="display: inline-block; line-height: .999em; width: 140px;">Unprocessable</code></a></td>
+						<td style="padding:0"><pre style="padding:0;margin:0;padding-left:.5em;">Request invalid or missing parameters.</pre></td></td>
+					</tr>
+					<tr>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>;width:45px;text-align:center;display:block" class="method read btn-danger">498</a></td>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>"><code style="display: inline-block; line-height: .999em; width: 140px;">Invalid Token</code></a></td>
+						<td style="padding:0"><pre style="padding:0;margin:0;padding-left:.5em;">Request was made with Invalid Token.</pre></td></td>
+					</tr>
+					<tr>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>;width:45px;text-align:center;display:block" class="method read btn-danger">405</a></td>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>"><code style="display: inline-block; line-height: .999em; width: 140px;">Method Not Allowed</code></a></td>
+						<td style="padding:0"><pre style="padding:0;margin:0;padding-left:.5em;">Requested resource method is unavailable.</pre></td></td>
+					</tr>
+				</tbody></table>
+			</div>

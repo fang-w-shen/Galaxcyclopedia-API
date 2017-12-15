@@ -1,5 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'solarsystemwiki@api.com'
+  default from: 'galaxcyclopedia@api.com'
   layout 'mailer'
 end
 

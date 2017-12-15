@@ -1,0 +1,15 @@
+<h1 style="margin-top:-5px;text-align: left;color: #33ff33;">Versions</h1>
+<hr>
+<div class="mc-table-wrap col-md-12" style="padding:0;">
+	<p>To request specific versions, add an <code>accept header</code> to your request.</p>
+	Example
+	<pre style="background: black; color: #33ff33;">
+$.ajax({
+    "url": 'https://galaxcyclopedia.herokuapp.com/solarsystem?api_key={api_key}',
+    "headers": {
+        "accept": 'version.2.0.json'
+    }
+}).done((response) => {
+    console.log(response);
+});</pre>
+</div>

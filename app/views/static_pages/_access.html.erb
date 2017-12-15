@@ -1,0 +1,61 @@
+			<h1 style="margin-top:-5px;text-align: left;color: #33ff33;">Access</h1>
+			<hr>
+			<div class="mc-table-wrap col-md-12" style="padding:0;">
+				<table class="link-to-action mc-table col-md-12">
+					<tbody><tr>
+						<th style="<%= logged_in? ? 'border-bottom: 1px solid black' : 'border-bottom: 1px solid white' %>">HTTP</th>
+						<th style="<%= logged_in? ? 'border-bottom: 1px solid black' : 'border-bottom: 1px solid white' %>">Endpoint</th>
+						<th style="<%= logged_in? ? 'border-bottom: 1px solid black' : 'border-bottom: 1px solid white' %>">Function</th>
+					</tr>
+					<tr>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>;width:45px;text-align:center;display:block" class="method post btn-danger">POST</a></td>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>" href="/signup"><code style="display: inline-block; line-height: .999em; width: 90px;">/signup</code></a></td>
+						<td style="padding:0"><pre style="padding:0;margin:0;padding-left:.5em;">Sign Up to receive your own api_key.</pre></td></td>
+					</tr>
+					<tr>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>;width:45px;text-align:center;display:block" class="method read btn-success">GET</a></td>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>" href="/solarsystem/?api_key=demo"><code style="display: inline-block; line-height: .999em; width: 90px;">/solarsystem</code></a></td>
+						<td style="padding:0"><pre style="padding:0;margin:0;padding-left:.5em;">Get list of planets and their information.</pre></td></td>
+					</tr>
+					<tr>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>;width:45px;text-align:center;display:block" class="method read btn-success">GET</a></td>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>" href="/mercury/?api_key=demo"><code style="display: inline-block; line-height: .999em; width: 90px;">/mercury</code></a></td>
+						<td style="padding:0"><pre style="padding:0;margin:0;padding-left:.5em;">Get information on Mercury.</pre></td></td>
+					</tr>
+					<tr>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>;width:45px;text-align:center;display:block" class="method read btn-success">GET</a></td>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>" href="/venus/?api_key=demo"><code style="display: inline-block; line-height: .999em; width: 90px;">/venus</code></a></td>
+						<td style="padding:0"><pre style="padding:0;margin:0;padding-left:.5em;">Get information on Venus.</pre></td></td>
+					</tr>
+					<tr>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>;width:45px;text-align:center;display:block" class="method read btn-success">GET</a></td>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>" href="/earth/?api_key=demo"><code style="display: inline-block; line-height: .999em; width: 90px;">/earth</code></a></td>
+						<td style="padding:0"><pre style="padding:0;margin:0;padding-left:.5em;">Get information on Earth.</pre></td>
+					</tr>
+					<tr>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>;width:45px;text-align:center;display:block" class="method read btn-success">GET</a></td>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>" href="/mars/?api_key=demo"><code style="display: inline-block; line-height: .999em; width: 90px;">/mars</code></a></td>
+						<td style="padding:0"><pre style="padding:0;margin:0;padding-left:.5em;">Get information on Mars.</pre></td></td>
+					</tr>
+					<tr>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>;width:45px;text-align:center;display:block" class="method read btn-success">GET</a></td>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>" href="/jupiter/?api_key=demo"><code style="display: inline-block; line-height: .999em; width: 90px;">/jupiter</code></a></td>
+						<td style="padding:0"><pre style="padding:0;margin:0;padding-left:.5em;">Get information on Jupiter.</pre></td></td>
+					</tr>
+					<tr>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>;width:45px;text-align:center;display:block" class="method read btn-success">GET</a></td>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>" href="/saturn/?api_key=demo"><code style="display: inline-block; line-height: .999em; width: 90px;">/saturn</code></a></td>
+						<td style="padding:0"><pre style="padding:0;margin:0;padding-left:.5em;">Get information on Saturn.</pre></td></td>
+					</tr>
+					<tr>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>;width:45px;text-align:center;display:block" class="method read btn-success">GET</a></td>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>" href="/uranus/?api_key=demo"><code style="display: inline-block; line-height: .999em; width: 90px;">/uranus</code></a></td>
+						<td style="padding:0"><pre style="padding:0;margin:0;padding-left:.5em;">Get information on Uranus.</pre></td></td>
+					</tr>
+					<tr>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>;width:45px;text-align:center;display:block" class="method read btn-success">GET</a></td>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>" href="/neptune/?api_key=demo"><code style="display: inline-block; line-height: .999em; width: 90px;">/neptune</code></a></td>
+						<td style="padding:0"><pre style="padding:0;margin:0;padding-left:.5em;">Get information on Neptune.</pre></td></td>
+					</tr>
+				</tbody></table>
+			</div>

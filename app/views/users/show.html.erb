@@ -21,9 +21,13 @@
 				</a>
 			</div>
 		</section>
+
+
 		<section class="post_form">
-			<%= render 'shared/post_form' %>
+			<%= render 'shared/post_form' if current_user == @user %>
 		</section>
+
+
 
 	</aside>
 	<div class="col-md-8">

@@ -20,12 +20,12 @@ Rails.application.routes.draw do
 	resources :relationships,       only: [:create, :destroy]
 	resources :account_activations, only: [:edit]
 	resources :password_resets,     only: [:new, :create, :edit, :update]
-	scope module: :v1, constraints: ApiVersion.new('v1') do
-		resources :solar_systems, only: :index, path: "solarsystemapi"
+	scope module: :v1, constraints: ApiVersion.new('1.0') do
+		resources :solar_systems, only: :index, path: "solarsystem"
 
 	end
-	scope module: :v2, constraints: ApiVersion.new('v2', true) do
-		resources :solar_systems, only: :index, path: "solarsystemapi"
+	scope module: :v2, constraints: ApiVersion.new('2.0', true) do
+		resources :solar_systems, only: :index, path: "solarsystem"
 		resources :solar_systems, only: :index, path: "mercury"
 		resources :solar_systems, only: :index, path: "venus"
 		resources :solar_systems, only: :index, path: "earth"
@@ -37,6 +37,6 @@ Rails.application.routes.draw do
 	end
 
 
-	post 'auth/login', to: 'authentication#authenticate'
-	post 'auth/signup', to: 'users#create'
+	# post 'auth/login', to: 'authentication#authenticate'
+	# post 'auth/signup', to: 'users#create'
 end
