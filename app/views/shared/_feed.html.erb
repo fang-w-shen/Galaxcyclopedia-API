@@ -5,9 +5,9 @@
 <div class="col-lg-12 col-md-12" style="position:fixed;z-index:-2;left:-12px;margin:0;padding:0;width:101vw;">
 	<% @feed_items.each do |item| %>
 
-	<div class="post-box col-lg-3 col-md-3 col-sm-3" style="margin-top: -15px">
+	<div class="post-box col-lg-3 col-md-3 col-sm-3" style="margin-top: -20px">
 		<a href="/users/<%= item.user.id %>"><img class="imgs" src="<%= item.picture %>" alt="<%= item.content %>"/></a>
-		<div class='hoverablething' style="height: 40%;vertical-align: middle;top: 55%;padding-left: 2px;"><%= User.find(item.user_id)[:name] %><hr><%= item.content %></div>
+		<div class='hoverablething' style="height: 40%;vertical-align: middle;top: 52%;padding-left: 2px;"><%= User.find(item.user_id)[:name] %><hr><%= item.content %></div>
 	</div>
 	<% end %>
 
