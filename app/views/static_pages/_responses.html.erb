@@ -48,14 +48,14 @@
 						<td style="padding:0"><pre style="padding:0;margin:0;padding-left:.5em;">Request invalid or missing parameters.</pre></td></td>
 					</tr>
 					<tr>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>;width:45px;text-align:center;display:block" class="method read btn-danger">429</a></td>
+						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>"><code style="display: inline-block; line-height: .999em; width: 140px;">Too Many Requests</code></a></td>
+						<td style="padding:0"><pre style="padding:0;margin:0;padding-left:.5em;">Request Rate Limit Reached.</pre></td></td>
+					</tr>
+					<tr>
 						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>;width:45px;text-align:center;display:block" class="method read btn-danger">498</a></td>
 						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>"><code style="display: inline-block; line-height: .999em; width: 140px;">Invalid Token</code></a></td>
 						<td style="padding:0"><pre style="padding:0;margin:0;padding-left:.5em;">Request was made with Invalid Token.</pre></td></td>
-					</tr>
-					<tr>
-						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>;width:45px;text-align:center;display:block" class="method read btn-danger">405</a></td>
-						<td><a data-content="" style="<%= logged_in? ? 'color: black' : 'color: white' %>"><code style="display: inline-block; line-height: .999em; width: 140px;">Method Not Allowed</code></a></td>
-						<td style="padding:0"><pre style="padding:0;margin:0;padding-left:.5em;">Requested resource method is unavailable.</pre></td></td>
 					</tr>
 				</tbody></table>
 			</div>

@@ -1,7 +1,8 @@
 <div class="col-md-12" style="padding-top:1em;"><h1 style="margin-top:-5px;text-align: left;">Overview</h1>
 <hr style="border-color:<%= logged_in? ? 'black' : 'white' %>">
 <div class="mc-table-wrap col-md-12" style="height:22vh;text-align: justify;padding-top:1em;padding-left: 0;">
-	<p><b>Galaxcyclopedia API's resources and data queries are represented in JSON format. Versioning requests can be modified through the header. There are currently two versions of the API. If a request is made without a specific accept header, the response will default to the latest version, Galaxcyclopedia 2.0.</b></p>
+	<p><b>Galaxcyclopedia API's resources and data queries are represented in JSON format. Resource requests are limited based on IP address with a maximum threshold of 60 requests per minute. Versioning requests can be modified through the header. There are currently two versions of the API. If a request is made without a specific accept header, the response will default to the latest version, Galaxcyclopedia 2.0.
+</b></p>
 
 </div>
 </div>

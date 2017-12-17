@@ -19,6 +19,7 @@ gem 'jbuilder',                '2.7.0'
 gem 'rack-cors'
 gem 'jwt'
 gem 'active_model_serializers'
+gem 'rack-attack'
 group :development, :test do
   gem 'sqlite3', '1.3.13'
   gem 'byebug',  '9.0.6', platform: :mri

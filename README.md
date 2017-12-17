@@ -5,6 +5,7 @@
 ## Overview
 ```
 Galaxcyclopedia API's resources and data queries are represented in JSON format. Versioning requests can be modified through the header.
+Resource requests are limited based on IP address with a maximum threshold of 60 requests per minute.
 ```
 
 ## Version & Access
@@ -53,8 +54,8 @@ resources "/neptune"
 403  Forbidden	         Access Denied.
 404  Not Found	         Resource was not found.
 422  Unprocessable	     Request invalid or missing parameters.
+429  Too Many Requests	 Request Rate Limit Reached.
 498  Invalid Token	     Request was made with Invalid Token.
-405  Method Not Allowed	 Requested resource method is unavailable.
 ```
 
 ## Cloning Source Code

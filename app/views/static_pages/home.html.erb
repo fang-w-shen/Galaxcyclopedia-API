@@ -3,9 +3,9 @@
 		<%= render 'shared/feed' %>
 	</div>
 
-	<aside class="col-md-3" style="color:white;position: fixed;color: white;top: 40vh;left:44.5vw;    width: 12vw;background:rgba(0,0,0,.6);padding:20px;border-radius:10px">
+	<aside class="col-md-3" style="color:white;position: fixed;color: white;top: 40vh;left:44.5vw;    width: 12vw;background:rgba(0,0,0,.84);padding:36px;border-radius:10px">
 		<%= form_tag('/', :method => "get", id: "search-form") do %>
-		<input type="text" name="search" id="search" placeholder="Search By Tag:" style="color:black;">
+		<input type="text" name="search" id="search" placeholder="Search By Tag:" style="color:black;text-align: center;">
 		<%= submit_tag "Search", :name => nil, :class => 'btn-success' %>
 		<% end %>
 
