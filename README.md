@@ -57,13 +57,13 @@ resources "/neptune"
 200  OK	                 Request was successful.
 201  Created	         Resource was created successfully.
 204  No Content	         Request successful but no content to display.
-400  Bad Request	     Request could not be understood.
-401  Unauthorized	     Authentication failed / Permission Denied.
+400  Bad Request	 Request could not be understood.
+401  Unauthorized	 Authentication failed / Permission Denied.
 403  Forbidden	         Access Denied.
 404  Not Found	         Resource was not found.
-422  Unprocessable	     Request invalid or missing parameters.
+422  Unprocessable	 Request invalid or missing parameters.
 429  Too Many Requests	 Request Rate Limit Reached.
-498  Invalid Token	     Request was made with Invalid Token.
+498  Invalid Token	 Request was made with Invalid Token.
 ```
 
 ## Cloning Source Code
