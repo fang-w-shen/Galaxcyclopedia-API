@@ -8,20 +8,18 @@ Ruby on Rails Image Hosting Site With RESTful API
 **[View Documentation](https://galaxcyclopedia.herokuapp.com/)**
 
 ## Overview
-```
 Galaxcyclopedia API's resources and data queries are represented in JSON format. 
 Versioning requests can be modified through the header.
 Resource requests are limited based on IP address with a maximum threshold of 60 requests per minute.
-```
+
 
 
 
 ## Version & Access
-The following end-points are available when the API server is running:
-Developers can access records from the following resources:
-```
+
 There are currently two versions of the API. If a request is made without a specific accept header, the response will default to the latest version, Galaxcyclopedia 2.0. To request specific versions, add an accept header to your request.
-```
+
+
 Example
 ```
 $.ajax({
