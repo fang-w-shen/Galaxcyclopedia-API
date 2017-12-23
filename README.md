@@ -1,11 +1,11 @@
 # [GALAXCYCLOPEDIA-API](https://galaxcyclopedia.herokuapp.com/)
-# Ruby on Rails Image Hosting Site With RESTful API
+Ruby on Rails Image Hosting Site With RESTful API
 
 ## Preview
 
 [![PREVIEW](https://github.com/fang-w-shen/Galaxcyclopedia-API/blob/master/app/assets/images/preview.png)](https://galaxcyclopedia.herokuapp.com/)
 
-**[Solar System API - View Documentation](https://galaxcyclopedia.herokuapp.com/)**
+**[View Documentation](https://galaxcyclopedia.herokuapp.com/)**
 
 ## Overview
 ```
