@@ -1,4 +1,9 @@
-# Ruby on Rails Image Hosting Site With RESTful Solar System API
+# [GALAXCYCLOPEDIA-API](https://galaxcyclopedia.herokuapp.com/)
+# Ruby on Rails Image Hosting Site With RESTful API
+
+## Preview
+
+[![PREVIEW](https://github.com/fang-w-shen/Galaxcyclopedia-API/blob/master/app/assets/images/preview.png)](https://galaxcyclopedia.herokuapp.com/)
 
 **[Solar System API - View Documentation](https://galaxcyclopedia.herokuapp.com/)**
 
@@ -9,9 +14,6 @@ Versioning requests can be modified through the header.
 Resource requests are limited based on IP address with a maximum threshold of 60 requests per minute.
 ```
 
-## Preview
-
-[![PREVIEW](https://github.com/fang-w-shen/Galaxcyclopedia-API/blob/master/app/assets/images/preview.png)](https://galaxcyclopedia.herokuapp.com/)
 
 
 ## Version & Access
