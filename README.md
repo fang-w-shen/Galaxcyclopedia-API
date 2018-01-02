@@ -8,7 +8,7 @@ Ruby on Rails Image Hosting Site With RESTful API
 **[View Documentation](https://galaxcyclopedia.herokuapp.com/)**
 
 ## Overview
-Galaxcyclopedia API's resources and data queries are represented in JSON format. 
+Galaxcyclopedia API's resources and data queries are represented in JSON format.
 Versioning requests can be modified through the header.
 Resource requests are limited based on IP address with a maximum threshold of 60 requests per minute.
 
@@ -78,7 +78,12 @@ Next, migrate the database:
 ```
 $ rails db:migrate
 ```
-Fire Away:
+Then, seed your database:
+
+```
+$ rails db:seed
+```
+Fire Away!:
 
 ```
 $ rails server
