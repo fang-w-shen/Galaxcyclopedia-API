@@ -17,7 +17,7 @@ Resource requests are limited based on IP address with a maximum threshold of 60
 
 ## Version & Access
 
-There are currently two versions of the API. If a request is made without a specific accept header, the response will default to the latest version, Galaxcyclopedia 2.0. To request specific versions, add an accept header to your request.
+There are currently two versions of the API. If a request is made without a specific accept header or with a header that is unrecognized, the response will default to the latest version, Galaxcyclopedia 2.0. To request specific versions, add an accept header to your request.
 
 
 Example
