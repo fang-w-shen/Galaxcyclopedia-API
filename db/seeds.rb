@@ -39,6 +39,7 @@ following = users[1..5]
 followers = users[1..5]
 following.each { |followed| user.follow(followed) }
 followers.each { |follower| follower.follow(user) }
+
 planets = {
   "Mercury": {
     "distance_from_sun": " 46,001,200 / 69,816,900 km",
@@ -49,7 +50,8 @@ planets = {
     "orbital_period":"88 days",
     "moons": 0,
     "length_of_day":"4222.6 hours",
-    "gravity":"3.7 m/s²"
+    "gravity":"3.7 m/s²",
+    "major_gases":"Oxygen, Sodium, Hydrogen, Helium"
   },
   "Venus": {
     "distance_from_sun": "107,477,000 / 108,939,000 km",
@@ -60,7 +62,8 @@ planets = {
     "orbital_period":"224.7 days",
     "moons": 0,
     "length_of_day":"2802 hours",
-    "gravity":"8.9 m/s²"
+    "gravity":"8.9 m/s²",
+    "major_gases":"Carbon Dioxide, Nitrogen"
   },
   "Earth": {
     "distance_from_sun": "147,095,000 / 152,100,000 km",
@@ -71,7 +74,8 @@ planets = {
     "orbital_period":"365.2 days",
     "moons": 1,
     "length_of_day":"24 hours",
-    "gravity":"9.8 m/s²"
+    "gravity":"9.8 m/s²",
+    "major_gases":"Nitrogen, Oxygen, Argon"
   },
   "Mars": {
     "distance_from_sun": "206,669,000 / 249,209,300 km",
@@ -82,7 +86,8 @@ planets = {
     "orbital_period":"687 days",
     "moons": 2,
     "length_of_day":"24.7 hours",
-    "gravity":"3.7 m/s²"
+    "gravity":"3.7 m/s²",
+    "major_gases":"Carbon Dioxide, Nitrogen, Argon"
   },
   "Jupiter": {
     "distance_from_sun": "740,573,600 / 816,520,800 km",
@@ -93,7 +98,8 @@ planets = {
     "orbital_period":"4331 days",
     "moons": 67,
     "length_of_day":"9.9 hours",
-    "gravity":"23.1 m/s²"
+    "gravity":"23.1 m/s²",
+    "major_gases":"Hydrogen, Helium"
   },
   "Saturn": {
     "distance_from_sun": "1,353,572,956 / 1,513,325,783 km",
@@ -104,7 +110,8 @@ planets = {
     "orbital_period":"10,747 days",
     "moons": 62,
     "length_of_day":"10.7 hours",
-    "gravity":"9.0 m/s²"
+    "gravity":"9.0 m/s²",
+    "major_gases":"Hydrogen, Helium"
   },
   "Uranus": {
     "distance_from_sun": "2,748,938,461 / 3,004,419,704 km",
@@ -115,7 +122,8 @@ planets = {
     "orbital_period":"30,589 days",
     "moons": 27,
     "length_of_day":"17.2 hours",
-    "gravity":"8.7 m/s²"
+    "gravity":"8.7 m/s²",
+    "major_gases":"Methane, Hydrogen, Helium"
   },
   "Neptune": {
     "distance_from_sun": "4,452,940,833 / 4,553,946,490 km",
@@ -126,7 +134,8 @@ planets = {
     "orbital_period":"59,800 days",
     "moons": 14,
     "length_of_day":"16.1 hours",
-    "gravity":"11.0 m/s²"
+    "gravity":"11.0 m/s²",
+    "major_gases":"Methane, Hydrogen, Helium"
   }
 }
 planets.each do |planet|
@@ -141,7 +150,9 @@ diameter:planet[1][:diameter],
 orbital_period:planet[1][:orbital_period],
 moons:planet[1][:moons],
 length_of_day:planet[1][:length_of_day],
-gravity:planet[1][:gravity]
+gravity:planet[1][:gravity],
+major_gases:planet[1][:major_gases],
+
 
 
 

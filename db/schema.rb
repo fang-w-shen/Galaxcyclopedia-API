@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20171212033833) do
     t.integer "moons"
     t.string "length_of_day"
     t.string "gravity"
+    t.string "major_gases"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

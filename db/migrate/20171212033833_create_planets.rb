@@ -11,6 +11,7 @@ class CreatePlanets < ActiveRecord::Migration[5.1]
 			t.integer :moons
 			t.string :length_of_day
 			t.string :gravity
+			t.string :major_gases
 			t.timestamps
 
 		end

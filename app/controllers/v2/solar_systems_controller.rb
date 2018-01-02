@@ -8,7 +8,7 @@ module  V2
 				if params[:api_key] == 'demo'
 					render json: { status: Message.successful_request, version: 'demo', data: Planet.all.select(:id,:name, :moons)}
 				elsif params[:api_key] && User.exists?(:api_key => params[:api_key])
-					render json: { status: Message.successful_request, version: '2.0', data: Planet.all.select(:id,:name,:distance_from_sun, :mass, :average_temperature, :volume, :diameter, :orbital_period, :moons, :length_of_day, :gravity)}
+					render json: { status: Message.successful_request, version: '2.0', data: Planet.all.select(:id,:name,:distance_from_sun, :mass, :average_temperature, :volume, :diameter, :orbital_period, :moons, :length_of_day, :gravity, :major_gases)}
 				else
 					json_response({ Message: 'Invalid API KEY'})
 				end
@@ -35,7 +35,7 @@ module  V2
 			if params[:api_key] == 'demo'
 				render json: { status: Message.successful_request, version: 'demo', data: Planet.all.where("name ILIKE ?",planet).select(:id,:name, :moons)}
 			elsif params[:api_key] && User.exists?(:api_key => params[:api_key])
-				render json: { status: Message.successful_request, version: '2.0', data: Planet.all.where("name ILIKE ?",planet).select(:id,:name,:distance_from_sun, :mass, :average_temperature, :volume, :diameter, :orbital_period, :moons, :length_of_day, :gravity)}
+				render json: { status: Message.successful_request, version: '2.0', data: Planet.all.where("name ILIKE ?",planet).select(:id,:name,:distance_from_sun, :mass, :average_temperature, :volume, :diameter, :orbital_period, :moons, :length_of_day, :gravity, :major_gases)}
 
 			else
 				json_response({ Message: 'Invalid API KEY'})
