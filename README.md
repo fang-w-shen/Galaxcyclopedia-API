@@ -70,17 +70,19 @@ Ruby on Rails
 
 Amazon Web Services
 
+SendGrid E-Mail Delivery Service
+
 SASS
 
 Bootstrap
 
-REST API
+REST API Architecture
+
+Documentation
 
 Versioning
 
 Rate Throttling
-
-Documentation
 
 SQLite
 
