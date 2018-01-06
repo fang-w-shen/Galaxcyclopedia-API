@@ -92,10 +92,11 @@ Heroku
 
 ## Cloning Source Code
 
-To get started with the app, clone the repo and then install the needed gems:
+To get started with the app, clone the repo, change directories into the newly created Galaxcyclopedia-API folder, and then install the needed gems:
 
 ```
 $ git clone https://github.com/fang-w-shen/Galaxcyclopedia-API.git
+$ cd Galaxcyclopedia-API
 $ bundle install --without production
 ```
 
