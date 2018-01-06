@@ -1,5 +1,5 @@
-# [GALAXCYCLOPEDIA-API](https://galaxcyclopedia.herokuapp.com/)
-Ruby on Rails Image Hosting Site With RESTful API
+# Galaxcyclopedia-API
+Full Ruby on Rails Application with User Interface for API Documentation and File Sharing and RESTful API for Planetary Data Querying
 
 ## Preview
 
@@ -15,7 +15,7 @@ Resource requests are limited based on IP address with a maximum threshold of 60
 
 
 
-## Version & Access
+## Versioning & Access
 
 There are currently two versions of the API. If a request is made without a specific accept header or with a header that is unrecognized, the response will default to the latest version, Galaxcyclopedia 2.0. To request specific versions, add an accept header to your request.
 
@@ -64,7 +64,7 @@ resources "/neptune"
 498  Invalid Token	 Request was made with Invalid Token.
 ```
 
-## Technologies
+## Technologies Used
 
 Ruby on Rails
 
