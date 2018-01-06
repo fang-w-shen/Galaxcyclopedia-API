@@ -1,5 +1,5 @@
 # Galaxcyclopedia-API
-Full Ruby on Rails Application with User Interface for API Documentation and File Sharing and RESTful API for Planetary Data Querying
+Galaxcyclopedia-API is a full Ruby on Rails Application with a user interface for API Documentation and File Sharing and RESTful API JSON Data for Planetary Data Querying.
 
 ## Preview
 
