@@ -112,7 +112,7 @@ Then, seed your database (optional):
 ```
 $ rails db:seed
 ```
-Finally, Fire Away!:
+Finally, navigate to localhost:3000 and Fire Away!
 
 ```
 $ rails server
