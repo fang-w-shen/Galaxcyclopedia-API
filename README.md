@@ -5,7 +5,7 @@ Galaxcyclopedia-API is a full Ruby on Rails Application with a user interface fo
 
 [![PREVIEW](https://github.com/fang-w-shen/Galaxcyclopedia-API/blob/master/app/assets/images/preview.png)](https://galaxcyclopedia.herokuapp.com/)
 
-**[View Live Site & Documentation!](https://galaxcyclopedia.herokuapp.com/)**
+**[View Site & Documentation!](https://galaxcyclopedia.herokuapp.com/)**
 
 ## Overview
 Galaxcyclopedia API's resources and data queries are represented in JSON format.
