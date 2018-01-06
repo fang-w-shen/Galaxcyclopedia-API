@@ -118,10 +118,6 @@ Finally, navigate to localhost:3000 and Fire Away!
 $ rails server
 ```
 
-## Contributors
-
-[Fang W. Shen](https://github.com/fang-w-shen)
-
 
 ## Copyright and License
-Copyright 2017 under [Fang-W-Shen](https://github.com/fang-w-shen).
+Copyright 2018 under [Fang-W-Shen](https://github.com/fang-w-shen).
