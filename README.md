@@ -5,7 +5,7 @@ Ruby on Rails Image Hosting Site With RESTful API
 
 [![PREVIEW](https://github.com/fang-w-shen/Galaxcyclopedia-API/blob/master/app/assets/images/preview.png)](https://galaxcyclopedia.herokuapp.com/)
 
-**[View Documentation](https://galaxcyclopedia.herokuapp.com/)**
+**[View Live Site & Documentation!](https://galaxcyclopedia.herokuapp.com/)**
 
 ## Overview
 Galaxcyclopedia API's resources and data queries are represented in JSON format.
@@ -64,6 +64,32 @@ resources "/neptune"
 498  Invalid Token	 Request was made with Invalid Token.
 ```
 
+## Technologies
+
+Ruby on Rails
+
+Amazon Web Services
+
+SASS
+
+Bootstrap
+
+REST API
+
+Versioning
+
+Rate Throttling
+
+Documentation
+
+SQLite
+
+PGSQL
+
+DB Browser
+
+Heroku
+
 ## Cloning Source Code
 
 To get started with the app, clone the repo and then install the needed gems:
@@ -78,12 +104,12 @@ Next, migrate the database:
 ```
 $ rails db:migrate
 ```
-Then, seed your database:
+Then, seed your database (optional):
 
 ```
 $ rails db:seed
 ```
-Fire Away!:
+Finally, Fire Away!:
 
 ```
 $ rails server
